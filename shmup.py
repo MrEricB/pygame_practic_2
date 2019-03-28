@@ -146,6 +146,7 @@ for snd in ['expl4.wav', 'expl5.wav']:
 
 # background music
 pygame.mixer.music.load(path.join(snd_dir, 'tgfcoder-FrozenJam-SeamlessLoop.ogg'))
+pygame.mixer.music.set_volume(0.4)
 
 
 all_sprites = pygame.sprite.Group()
@@ -159,6 +160,9 @@ for i in range(8):
     mobs.add(m)
 
 score = 0
+
+#start background music
+pygame.mixer.music.play(loops=-1) # -1 loops music 
 
 # Game Loop
 running = True
